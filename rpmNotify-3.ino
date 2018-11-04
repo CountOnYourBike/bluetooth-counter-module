@@ -120,7 +120,7 @@ void loop() {
           Serial.println(cumWheelRevs);
           wheelEventTime = (clock() - startTime) * 1000 / CLOCKS_PER_SEC;
           
-          if(startTime - clock() > MIN_WHEEL_EVENT_TIME){        
+          if(wheelEventTime > MIN_WHEEL_EVENT_TIME){        
             Serial.print("startTime = ");
             Serial.println(startTime);
 
